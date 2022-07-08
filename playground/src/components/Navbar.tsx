@@ -6,13 +6,7 @@ export function Navbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to="/"></Link>
-                </li>
-                <li>
                     <Link to="/home"></Link>
-                </li>
-                <li>
-                    <Link to="/about"></Link>
                 </li>
                 <li>
                     <Link to="/timer"></Link>
