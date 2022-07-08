@@ -3,8 +3,9 @@ import {
     Routes,
     Route
 } from "react-router-dom";
-import { About } from "./pages/About";
 import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Timer } from "./pages/Timer";
 
 export function AppRoutes() {
     return (
@@ -12,6 +13,7 @@ export function AppRoutes() {
             <Routes>
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/timer" element={<Timer date={new Date()} />} />
             </Routes>
         </Router>
     )

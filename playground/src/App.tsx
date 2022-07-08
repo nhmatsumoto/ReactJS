@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Tweet } from "./components/Tweet"
 import { AppRoutes } from "./routes";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <AppRoutes />
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
 
