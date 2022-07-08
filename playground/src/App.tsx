@@ -24,13 +24,11 @@ function App() {
         onClick={
           createTweet
         }
-        style={
-          {
-            color: '#ffd43b',
-            background: '#04151c',
-            border: 0,
-          }
-        }>
+        style={{
+          color: '#ffd43b',
+          background: '#04151c',
+          border: 0,
+        }}>
         Add
       </button>
     </div>
