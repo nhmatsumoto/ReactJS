@@ -1,45 +1,40 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import { Tweet } from "./components/Tweet"
 
 function App() {
-  const [count, setCount] = useState(0)
+  //CODE
+  const [tweets, setTweets] = useState<string[]>([
+    'Hello 1',
+    'Hello 2',
+    'Hello 3',
+  ]);
 
+  function createTweet() {
+    setTweets([...tweets, 'Hello 4'])
+  }
+
+  //HTML
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div>
+      {tweets.map(t => {
+        return <Tweet text={t} />
+      })}
+
+      <button
+        onClick={
+          createTweet
+        }
+        style={
+          {
+            color: '#ffd43b',
+            background: '#04151c',
+            border: 0,
+          }
+        }>
+        Add
+      </button>
     </div>
-  )
+  );
 }
 
 export default App
